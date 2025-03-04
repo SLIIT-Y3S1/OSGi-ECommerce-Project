@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Orderconsumer
+Bundle-SymbolicName: osgi.orderconsumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: osgi.orderconsumer.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: osgi.orderconsumer
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy

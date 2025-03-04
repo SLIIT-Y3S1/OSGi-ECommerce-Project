@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Osgi_testproducer
+Bundle-SymbolicName: osgi_testproducer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: osgi_testproducer.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: osgi_testproducer
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: osgi_testproducer

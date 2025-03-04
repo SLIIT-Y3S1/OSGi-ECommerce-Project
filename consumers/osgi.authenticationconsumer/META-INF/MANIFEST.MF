@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Authenticationconsumer
+Bundle-SymbolicName: osgi.authenticationconsumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: osgi.authenticationconsumer.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: osgi.authenticationconsumer
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
