@@ -3,8 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Reviewconsumer
 Bundle-SymbolicName: osgi.reviewconsumer
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: osgi.reviewconsumer.Activator
+Bundle-Activator: osgi.reviewconsumer.ReviewConsumerActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: osgi.reviewconsumer
 Import-Package: org.osgi.framework;version="1.3.0"
 Bundle-ActivationPolicy: lazy
+Require-Bundle: osgi.reviewproducer;bundle-version="1.0.0"

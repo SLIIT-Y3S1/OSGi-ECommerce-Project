@@ -3,8 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Discountconsumer
 Bundle-SymbolicName: osgi.discountconsumer
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: osgi.discountconsumer.Activator
+Bundle-Activator: osgi.discountconsumer.DiscountConsumerActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: osgi.discountconsumer
 Import-Package: org.osgi.framework;version="1.3.0"
 Bundle-ActivationPolicy: lazy
+Require-Bundle: osgi.discountproducer
