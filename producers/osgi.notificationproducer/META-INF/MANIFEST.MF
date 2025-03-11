@@ -3,6 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Notificationproducer
 Bundle-SymbolicName: osgi.notificationproducer
 Bundle-Version: 1.0.0.qualifier
+Export-Package: osgi.notificationproducer
 Bundle-Activator: osgi.notificationproducer.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: osgi.notificationproducer
