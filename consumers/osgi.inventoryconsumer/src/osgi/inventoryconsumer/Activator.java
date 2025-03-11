@@ -1,22 +1,44 @@
 package osgi.inventoryconsumer;
 
+//import java.util.Scanner;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+import osgi.inventoryproducer.InventoryProducer;
 
 public class Activator implements BundleActivator {
 
-	private static BundleContext context;
+    private ServiceReference<InventoryProducer> serviceReference;
+    private InventoryProducer service;
 
-	static BundleContext getContext() {
-		return context;
-	}
+    @Override
+    public void start(BundleContext bundleContext) throws Exception {
+        System.out.println("Console Inventory Consumer Started");
 
-	public void start(BundleContext bundleContext) throws Exception {
-		Activator.context = bundleContext;
-	}
+        serviceReference = bundleContext.getServiceReference(InventoryProducer.class);
+        if (serviceReference != null) {
+            service = bundleContext.getService(serviceReference);
+            if (service != null) {
+                runConsole();
+            } else {
+                System.out.println("Inventory Service Not Available.");
+            }
+        } else {
+            System.out.println("Inventory Service Not Found.");
+        }
+    }
 
-	public void stop(BundleContext bundleContext) throws Exception {
-		Activator.context = null;
-	}
+    private void runConsole() {
+    	
+        service.main();
+        
+    }
 
+    @Override
+    public void stop(BundleContext bundleContext) throws Exception {
+        System.out.println("Console Inventory Consumer Stopped");
+        if (serviceReference != null) {
+            bundleContext.ungetService(serviceReference);
+        }
+    }
 }
