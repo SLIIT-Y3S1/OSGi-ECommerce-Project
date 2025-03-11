@@ -3,6 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Shippingproducer
 Bundle-SymbolicName: osgi.shippingproducer
 Bundle-Version: 1.0.0.qualifier
+Export-Package: osgi.shippingproducer
 Bundle-Activator: osgi.shippingproducer.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: osgi.shippingproducer

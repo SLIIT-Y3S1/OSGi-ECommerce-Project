@@ -3,6 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Inventoryproducer
 Bundle-SymbolicName: osgi.inventoryproducer
 Bundle-Version: 1.0.0.qualifier
+Export-Package: osgi.inventoryproducer
 Bundle-Activator: osgi.inventoryproducer.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: osgi.inventoryproducer
