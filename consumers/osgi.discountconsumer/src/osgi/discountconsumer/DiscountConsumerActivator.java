@@ -16,8 +16,20 @@ public class DiscountConsumerActivator implements BundleActivator {
              discountServiceReference = context.getServiceReference(DiscountServiceProducer.class.getName());
              if (discountServiceReference != null) {
             	 DiscountServiceProducer discountService = (DiscountServiceProducer) context.getService(discountServiceReference);
-                 double discountedTotal = discountService.applyDiscount("VIP123", 500.00);
+            	// Create Scanner to get input from the console
+                 Scanner scanner = new Scanner(System.in);
+
+                 System.out.print("Enter Customer ID: ");
+                 String customerId = scanner.nextLine();
+
+                 System.out.print("Enter Order Total: ");
+                 double orderTotal = scanner.nextDouble();
+            	 
+            	 
+                 double discountedTotal = discountService.applyDiscount(customerId, orderTotal);
+                 System.out.println("Original Total: $" + orderTotal);
                  System.out.println("Discounted Total: $" + discountedTotal);
+
                  
          
              } else {

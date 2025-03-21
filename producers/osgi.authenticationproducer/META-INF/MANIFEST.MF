@@ -7,6 +7,6 @@ Export-Package: osgi.authenticationproducer
 Bundle-Activator: osgi.authenticationproducer.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: osgi.authenticationproducer
-Import-Package: org.osgi.framework;version="1.3.0",
- osgi.notificationproducer
 Bundle-ActivationPolicy: lazy
+Import-Package: org.osgi.framework;version="1.9.0"
+Require-Bundle: osgi.notificationproducer
