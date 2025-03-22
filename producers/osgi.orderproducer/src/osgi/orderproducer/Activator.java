@@ -2,21 +2,25 @@ package osgi.orderproducer;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
 
 public class Activator implements BundleActivator {
 
-	private static BundleContext context;
+    private ServiceRegistration<OrderProducer> serviceRegistration;
 
-	static BundleContext getContext() {
-		return context;
-	}
+    public void start(BundleContext bundleContext) throws Exception {
+        System.out.println("Order Producer Started");
+        // Register the service
+        serviceRegistration = bundleContext.registerService(
+            OrderProducer.class, 
+            new OrderProducerImp(), 
+            null
+        );
+    }
 
-	public void start(BundleContext bundleContext) throws Exception {
-		Activator.context = bundleContext;
-	}
-
-	public void stop(BundleContext bundleContext) throws Exception {
-		Activator.context = null;
-	}
-
+    public void stop(BundleContext bundleContext) throws Exception {
+        System.out.println("Order Producer Stopped");
+        // Unregister the service
+        serviceRegistration.unregister();
+    }
 }
